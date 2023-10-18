@@ -15,10 +15,10 @@ export const RadixTooltip:FC<RadixTooltipProps> = ({trigger, children}) => {
           {trigger}
         </Tooltip.Trigger>
         <Tooltip.Portal>
-          <Tooltip.Content className="TooltipContent" sideOffset={5} align={"center"} side={'right'}>
+          <Tooltip.Content className="TooltipContent" sideOffset={5} align={"center"} side={'right'} style={{display: "flex", flexDirection: "column", gap: '10px'}}>
             {children}
             <Tooltip.Arrow className="TooltipArrow"/>
-            {/*<Arrow/>*/}
+            {/*<Arrow className="TooltipArrow/>*/}
           </Tooltip.Content>
         </Tooltip.Portal>
       </Tooltip.Root>

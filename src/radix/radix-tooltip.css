@@ -4,12 +4,12 @@ button {
 }
 
 .TooltipContent {
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 10px 15px;
     font-size: 15px;
     line-height: 1;
-    color: #7215d5;
-    background-color: white;
+    color: white;
+    background-color: #262626;
     box-shadow: hsl(206 22% 7% / 35%) 0 10px 38px -10px, hsl(206 22% 7% / 20%) 0 10px 20px -15px;
     user-select: none;
     animation-duration: 1000ms;
@@ -30,9 +30,11 @@ button {
 }
 
 .TooltipArrow {
-    fill: white;
-    height: 20px;
-    clip-path: polygon(0% 100%, 100% 110%, 100% 90%);
+    fill: #262626;
+    height: 10px;
+    /*width: 15px;*/
+    /*border-radius: 20px;*/
+    /*clip-path: polygon(0% 100%, 100% 110%, 100% 90%);*/
 
 }
 
