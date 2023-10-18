@@ -1,9 +1,9 @@
-import type {TooltipProps} from 'react-aria-components';
+// import type {TooltipProps} from 'react-aria-components';
 // import Arrow from "../assets/arrow.tsx";
 import {Button, OverlayArrow, Tooltip, TooltipTrigger} from 'react-aria-components';
-interface MyTooltipProps extends Omit<TooltipProps, 'children'> {
-  children: React.ReactNode
-}
+// interface MyTooltipProps extends Omit<TooltipProps, 'children'> {
+//   children: React.ReactNode
+// }
 
 export const ReactAreaTooltip = () => {
   return (
