@@ -14,8 +14,8 @@ interface IReactTooltipProps {
 
 export const ReactTooltip: FC<IReactTooltipProps> = ({anchorSelect, children}) => {
   return (
-    <Tooltip anchorSelect={anchorSelect} place="top">
-      {children}
+    <Tooltip anchorSelect={anchorSelect} place="right-end" style={{display: "flex", flexDirection: "column", alignItems: 'flex-end', borderRadius: '10px' }}>
+        {children}
     </Tooltip>
   )
 }
