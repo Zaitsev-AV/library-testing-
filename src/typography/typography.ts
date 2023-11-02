@@ -31,6 +31,7 @@ type TypographyPropsType = {
   color?: string
   fontWeight?: FontWeight
   fontSize?: FontSize
+  fontFamily?: string
 }
 
 
@@ -38,4 +39,5 @@ export const Typography = styled('p')<TypographyPropsType>`
   color: ${props => props.color || '#fff' };
   font-size: ${props => props.fontSize || FontSize.Regular};
   font-weight: ${props => props.fontWeight || FontWeight.Regular};
+  font-family: ${props => props.fontFamily || "JetBrains Mono"};
 `
