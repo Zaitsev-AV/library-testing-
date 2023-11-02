@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {CSSProperties} from "react";
 
 export enum FontWeight {
   UltraThin = "100",
@@ -27,11 +28,15 @@ export enum FontSize {
   Inherit = "inherit"
 }
 
+
 type TypographyPropsType = {
-  color?: string
+  color?: CSSProperties['color']
   fontWeight?: FontWeight
   fontSize?: FontSize
-  fontFamily?: string
+  fontFamily?: CSSProperties['fontFamily']
+  fontStyle?: CSSProperties['fontStyle']
+  letterSpacing?: CSSProperties['letterSpacing']
+  lineHeight?: CSSProperties['lineHeight']
 }
 
 
@@ -40,4 +45,7 @@ export const Typography = styled('p')<TypographyPropsType>`
   font-size: ${props => props.fontSize || FontSize.Regular};
   font-weight: ${props => props.fontWeight || FontWeight.Regular};
   font-family: ${props => props.fontFamily || "JetBrains Mono"};
+  font-style: ${props => props.fontStyle || 'normal'};
+  letter-spacing: ${props => props.letterSpacing || 'normal'};
+  line-height: ${props => props.lineHeight || 'normal'};
 `
