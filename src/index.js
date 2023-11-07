@@ -33,6 +33,52 @@ Array.prototype.toString = function () {
 }
 
 
-console.log(['footbar', [['hello']]].length)
+const palindrome_1 = num => typeof num === 'string' || num < 0 ? "Not valid" : +num.toString().split('').reverse().join('') === num
 
-console.log(['footbar', [['hello']]].toString())
+console.log(palindrome_1(1221))
+
+function palindrome(num,s) {
+    if (typeof num === 'string' || typeof s === "string" || num < 0 ) return "Not valid"
+
+    const check = (element) => {
+        return +element.toString().split('').reverse().join('') === element
+    }
+    let res = []
+    let start = num
+    if (num < 10) {
+        start = (10 - num) + num
+    }
+    while(res.length !== s ) {
+        if ( check(start)) {
+            res.push(start)
+        }
+        start++
+    }
+    return res
+}
+
+console.log(palindrome(6,4))
+
+const uniqueInOrder = (value) => {
+    let array = []
+    if (typeof value === "string") {
+        let arrValues = value.split('')
+        array = arrValues.reduce((result, value, index, array) => {
+            if (value !== array[index + 1]) {
+                result.push(value);
+            }
+            return result;
+        }, []);
+    } else {
+        array = value.reduce((result, value, index, array) => {
+            if (value !== array[index + 1]) {
+                result.push(value);
+            }
+            return result;
+        }, []);
+    }
+    return array
+}
+
+
+console.log(uniqueInOrder([1,2,2,3,3]) )
